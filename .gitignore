@@ -1,0 +1,4 @@
+Vagrantfile
+.vagrant/
+.gdb*
+peda*
