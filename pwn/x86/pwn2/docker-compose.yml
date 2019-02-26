@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  pwn1:
+    build: .
+    restart: always
+    container_name: pwn2
+    ports:
+      - "3456:4444"
