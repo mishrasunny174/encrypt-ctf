@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  pwn0:
+    build: ./pwn0/
+    restart: always
+    container_name: pwn0
+    ports:
+      - "1234:4444"
+  pwn1:
+    build: ./pwn1/
+    restart: always
+    container_name: pwn1
+    ports:
+      - "2345:4444"
+  pwn2:
+    build: ./pwn2
+    restart: always
+    container_name: pwn2
+    ports:
+      - "3456:4444"
+  pwn3:
+    build: ./pwn3
+    restart: always
+    container_name: pwn3
+    ports:
+      - "4567:4444"
+  pwn4:
+    build: ./pwn4
+    restart: always
+    container_name: pwn4
+    ports:
+      - "5678:4444"
