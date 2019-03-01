@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  ham-me-baby:
+    build: .
+    ports:
+      - 6969:4444
+    container_name: ham-me-baby      
