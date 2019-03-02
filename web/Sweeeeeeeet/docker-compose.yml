@@ -1,0 +1,7 @@
+version: "3"
+services:
+  sweeeeeeeet:
+    build: .
+    ports:
+      - 8080:80
+    container_name: Sweeeeeeeet
