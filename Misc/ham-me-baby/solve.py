@@ -1,8 +1,8 @@
-#!/usr/bin/env python2
 from pwn import *
-context.log_level="critical"
-#p = process("./hamming_code.py")
-p = remote("localhost",6969)
+#context.log_level="debug"
+
+p = remote("127.0.0.1",5004)
+
 
 
 def data_print(code):
@@ -74,12 +74,13 @@ def data_print(code):
 
 output = ""
 i=0
+#print p.recv(100)
 while i<100:
 	
-	codel = p.recvuntil("code: ")
+	codel = p.recvuntil("CODE: ")
 	#print "code recieved"
 	code = p.recv(7)
-	bits = p.recvuntil("bits: \n")
+	bits = p.recvuntil("DATA: ")
 	out = "".join(data_print(code))
 	#print "==========\nout: {}\n=========".format(out)
 
@@ -90,8 +91,7 @@ while i<100:
 	#output+=correct
 	output+=bits
 	i+=1
-	print i
+	log.info("sent "+out+" for code: "+code)
 
 
-print p.recv(40)
-	
+print p.recvall()

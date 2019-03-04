@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 
 #hamming code challenge
@@ -6,26 +6,29 @@
 import random
 
 
-intro = '''
+intro = r'''
+                        Welcome To 
 
-Welcome To Encrypt CTF 2019
+	   ____                       __    _______________  
+	  / __/__  __________ _____  / /_  / ___/_  __/ __/  
+	 / _// _ \/ __/ __/ // / _ \/ __/ / /__  / / / _/    
+	/___/_//_/\__/_/  \_, / .__/\__/  \___/ /_/ /_/      
+	              ___/___/_/_____                        
+	             |_  |/ _ <  / _ \                       
+	            / __// // / /\_, /                       
+	           /____/\___/_//___/                        
+		                                                     
 
-you will be provided a 7 bit hamming code with 4 bits as Data bit 
-and remaining 3 bits are parity bits and are used to detect error.
-hamming code can detect 1 bit of error and correct it.
-for Ex: 1001001 
-its a 7 bit code
+you will be receiving hamming(7,4) codes. your job is to send data bits
+from a 7 bit hamming code. 
+ ___________________________________________________________________
+|                                                                   |
+|   DO YOUR RESEARCH : https://en.wikipedia.org/wiki/Hamming(7,4)   |
+|  FLAG WILL BE PRINTED AFTER YOU SEND CORRECT DATA BITS 100 TIMES  |
+|___________________________________________________________________|
 
-left most bit is most significant bit
-and 1st,2nd,3rd and 5th bit from left are DATA bits and 1st, 2nd 
-and 4th bit from right are parity bit. you will be provided by 
-several hamming codes and your job is to send DATA bits from the
-hamming code
-
-REMEMBER Sometimes some bits may be flipped. you need to recognise
-correct the error and then send the Data Bits.
-
-AND WE FOLLOW EVEN PARITY AND WE WILL ASK IT 100 TIMES'''
+and come back here. remember somebits could be flipped. you need to send
+correct data bits.'''
 print intro
 
 print "\n"
@@ -110,13 +113,13 @@ def data_print(code):
 i=0
 for j in range(100):
 	n = generate_code()
-	print "hamming code:",n
-	print "enter data bits: "
-	ask = raw_input()
+	print "[*] CODE:",n
+	#print 
+	ask = raw_input("[*] DATA: ")
 	real = data_print(n)
 	realdata = "".join(real)
 	if ask == realdata:
-		print "correct"
+		print "CODE VALIDATED"
 		i+=1
 		
 	#print "i: " ,i
