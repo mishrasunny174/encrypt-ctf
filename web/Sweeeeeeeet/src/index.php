@@ -8,7 +8,7 @@
         if($_COOKIE["UID"]=="897316929176464ebc9ad085f31e7284")
             setcookie("FLAG", $flag);
         else
-            setcookie("FLAG","encryptCTF{y0u_c4nt_533_m3}");
+            setcookie("FLAG","encryptCTF{y0u_c4nt_U53_m3}");
     }
 ?>
 <html lang="en">
