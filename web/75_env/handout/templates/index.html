@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="My super totally awesome blog">
+	<title>My super totally awesome blog</title>
+	<style>
+	#timing {
+		margin: 50px 200px;
+		height:400px;
+		width: 200px;
+	}	
+	</style>
+</head>
+<body>
+	<img width="100%" src="{{ url_for('static', filename='legendary.jpg') }}">
+	<img src="{{ url_for('static', filename='ts1.jpg') }}">
+	<img src="{{ url_for('static', filename='ts2.png') }}">
+	<img src="{{ url_for('static', filename='ts3.jpg') }}">
+	<div id="timing">
+		<img src="{{ url_for('static', filename='timing.jpg') }}">
+	</div>
+</body>
+</html>
