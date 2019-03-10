@@ -2,7 +2,14 @@
     $file = fopen("/tmp/flag.txt", "r") or die("FLAG NOT FOUND");
     $flag = fread($file, filesize("/tmp/flag.txt"));
     fclose($file);
-    setcookie("FLAG", $flag);
+    if(!isset($_COOKIE["UID"]))
+        setcookie("UID", "919d117956d3135c4c683ff021352f5c",time()+60*60*24*2);
+    else {
+        if($_COOKIE["UID"]=="897316929176464ebc9ad085f31e7284")
+            setcookie("FLAG", $flag);
+        else
+            setcookie("FLAG","encryptCTF{y0u_c4nt_533_m3}");
+    }
 ?>
 <html lang="en">
 
