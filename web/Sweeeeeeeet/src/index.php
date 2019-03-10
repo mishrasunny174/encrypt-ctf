@@ -3,9 +3,9 @@
     $flag = fread($file, filesize("/tmp/flag.txt"));
     fclose($file);
     if(!isset($_COOKIE["UID"]))
-        setcookie("UID", "919d117956d3135c4c683ff021352f5c",time()+60*60*24*2);
+        setcookie("UID", md5("100"),time()+60*60*24*2);
     else {
-        if($_COOKIE["UID"]=="897316929176464ebc9ad085f31e7284")
+        if($_COOKIE["UID"]==md5("0"))
             setcookie("FLAG", $flag);
         else
             setcookie("FLAG","encryptCTF{y0u_c4nt_U53_m3}");
