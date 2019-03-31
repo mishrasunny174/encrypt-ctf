@@ -54,7 +54,7 @@ def inject():
             <img src='/static/lol.png'>
             <img src='/static/lol.png'>
             <img src='/static/lol.png'>
-        </div> %s!
+        </div> %s
         <!-- %s -->
     </body>
 </html>                         """ % (secret, hint)
