@@ -6,4 +6,4 @@ services:
     ports:
       - 6060:8080
     restart: always
-    container_name: handout
+    container_name: Env

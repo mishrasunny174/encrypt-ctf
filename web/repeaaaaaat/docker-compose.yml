@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  handout:
+    build: .
+    ports:
+      - 5050:8080
+    restart: always
+    container_name: repeaaaaaat
