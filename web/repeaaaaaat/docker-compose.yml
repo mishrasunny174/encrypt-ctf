@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  handout:
+  repeat:
     build: .
     ports:
       - 5050:8080
