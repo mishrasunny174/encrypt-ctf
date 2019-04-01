@@ -8,6 +8,7 @@ void __() {
 
 int main(){
 	char buffer[128];
+	setvbuf(stdout, NULL, _IONBF, 0);	
 	puts("Do you swear to use this shell with responsility by the old gods and the new?\n");
 	gets(buffer);
 	printf(buffer);
