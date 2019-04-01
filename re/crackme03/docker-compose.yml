@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  crackme02:
+  crackme03:
     build: .
     ports:
       - 7777:4444
-    container_name: crackme02
+    container_name: crackme03
