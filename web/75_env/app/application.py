@@ -18,9 +18,10 @@ FLAG = "encryptCTF{v1rtualenvs_4re_c00l}"
 def index():
 	return render_template('index.html')
 
+
 @app.route('/whatsthetime')
 def whatsthetime():
-	
+	return render_template('soclose.html')
 
 @app.route('/whatsthetime/<int:what_the_timestamp>', methods=["GET", "POST"])
 def getflag(what_the_timestamp):
